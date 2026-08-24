@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juan José González — Software Engineer · Cloud · AI</title>
+<meta name="description" content="Senior software engineer from Manizales, Colombia. Cloud architecture, distributed systems, AI/LLM applications, and DevOps.">
+<link rel="canonical" href="https://juanjosegongi.dev/">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --border:#30363d;
+    --text:#e6edf3; --muted:#8b949e; --accent:#58a6ff; --green:#3fb950;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{padding:64px 0 40px;border-bottom:1px solid var(--border)}
+  .badge{display:inline-block;background:rgba(63,185,80,.12);color:var(--green);border:1px solid rgba(63,185,80,.3);padding:4px 12px;border-radius:999px;font-size:13px;margin-bottom:18px}
+  h1{font-size:2.4rem;font-weight:750;letter-spacing:-.02em;margin-bottom:12px}
+  h1 .accent{color:var(--accent)}
+  .sub{color:var(--muted);font-size:1.1rem;max-width:640px}
+  .lang-toggle{margin-top:20px;font-size:13px;color:var(--muted)}
+  .lang-toggle button{background:none;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer;margin-right:6px;font-size:13px}
+  .lang-toggle button.active{color:var(--text);border-color:var(--accent)}
+  section{padding:48px 0;border-bottom:1px solid var(--border)}
+  h2{font-size:1.4rem;margin-bottom:24px;letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:20px}
+  .card h3{font-size:1rem;margin-bottom:8px;color:var(--accent)}
+  .card p{color:var(--muted);font-size:14px}
+  ul.skills{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  ul.skills li{background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:13px;color:var(--text)}
+  .contact{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap}
+  .contact a{color:var(--accent);text-decoration:none;font-size:14px}
+  .contact a:hover{text-decoration:underline}
+  footer{padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
+  .hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="badge">Available for consulting &amp; contract work</span>
+    <h1>Juan José <span class="accent">González</span></h1>
+    <p class="sub">Senior software engineer building reliable cloud systems, LLM-powered products, and developer tooling. Based in Manizales, Colombia — working worldwide.</p>
+    <div class="lang-toggle">
+      <button id="ln-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="ln-es" onclick="setLang('es')">ES</button>
+    </div>
+  </div>
+</header>
+
+<!-- ENGLISH -->
+<div id="page-en">
+<section>
+  <div class="wrap">
+    <h2>What I do</h2>
+    <div class="grid">
+      <div class="card"><h3>Cloud Architecture</h3><p>Reliable, cost-aware infrastructure on AWS, GCP, and self-hosted platforms. Minimal moving parts, designed for resilience.</p></div>
+      <div class="card"><h3>AI &amp; LLM Applications</h3><p>Production LLM products: agents, RAG, evaluation pipelines, and applied ML. From prototype to shipped feature.</p></div>
+      <div class="card"><h3>Backend &amp; Distributed Systems</h3><p>Clean, testable microservices and serverless backends. Strong focus on data integrity and observability.</p></div>
+      <div class="card"><h3>DevOps &amp; Platform</h3><p>CI/CD, container orchestration, autonomous monitoring loops, and secure deployment pipelines.</p></div>
+      <div class="card"><h3>Developer Tooling</h3><p>CLI tools, editor integrations, and agent-driven workflows that make engineering teams faster.</p></div>
+      <div class="card"><h3>Technical Leadership</h3><p>Architecture reviews, mentoring, and pragmatic decision-making grounded in first principles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Technical focus</h2>
+    <ul class="skills">
+      <li>TypeScript / Node.js</li><li>Python</li><li>Go</li><li>Astro / React</li>
+      <li>Cloud (AWS · GCP · Firebase)</li><li>Docker / K8s / Dokploy</li>
+      <li>LLM agents &amp; RAG</li><li>CI/CD · GitHub Actions</li>
+      <li>Testing &amp; TDD</li><li>System design</li><li>SQL / NoSQL</li>
+    </ul>
+    <div class="contact">
+      <a href="mailto:hola@juanjosegongi.dev">✉ hola@juanjosegongi.dev</a>
+      <a href="https://github.com/JuanJoseGonGi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/juanjosegongigiraldo" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SPANISH -->
+<div id="page-es" class="hidden">
+<section>
+  <div class="wrap">
+    <h2>Qué hago</h2>
+    <div class="grid">
+      <div class="card"><h3>Arquitectura Cloud</h3><p>Infraestructura confiable y eficiente en AWS, GCP y plataformas self-hosted. Mínimos componentes, diseñada para resiliencia.</p></div>
+      <div class="card"><h3>Apps con IA y LLM</h3><p>Productos con LLM en producción: agentes, RAG, pipelines de evaluación y ML aplicado. Del prototipo a la feature lanzada.</p></div>
+      <div class="card"><h3>Backend y Sistemas Distribuidos</h3><p>Microservicios y backends serverless limpios y testeables. Foco en integridad de datos y observabilidad.</p></div>
+      <div class="card"><h3>DevOps y Plataforma</h3><p>CI/CD, orquestación de contenedores, loops autónomos de monitoreo y pipelines de despliegue seguros.</p></div>
+      <div class="card"><h3>Tooling para Desarrolladores</h3><p>Herramientas CLI, integraciones de editor y flujos agent-driven que hacen más rápido a los equipos.</p></div>
+      <div class="card"><h3>Liderazgo Técnico</h3><p>Revisiones de arquitectura, mentoring y decisiones pragmáticas basadas en primeros principios.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Foco técnico</h2>
+    <ul class="skills">
+      <li>TypeScript / Node.js</li><li>Python</li><li>Go</li><li>Astro / React</li>
+      <li>Cloud (AWS · GCP · Firebase)</li><li>Docker / K8s / Dokploy</li>
+      <li>Agentes LLM y RAG</li><li>CI/CD · GitHub Actions</li>
+      <li>Testing y TDD</li><li>Diseño de sistemas</li><li>SQL / NoSQL</li>
+    </ul>
+    <div class="contact">
+      <a href="mailto:hola@juanjosegongi.dev">✉ hola@juanjosegongi.dev</a>
+      <a href="https://github.com/JuanJoseGonGi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/juanjosegongigiraldo" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Juan José González Giraldo — Manizales, Colombia</div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.getElementById('page-en').classList.toggle('hidden', l!=='en');
+    document.getElementById('page-es').classList.toggle('hidden', l!=='es');
+    document.getElementById('ln-en').classList.toggle('active', l==='en');
+    document.getElementById('ln-es').classList.toggle('active', l==='es');
+  }
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
