@@ -19,8 +19,10 @@
   h1{font-size:2.4rem;font-weight:750;letter-spacing:-.02em;margin-bottom:12px}
   h1 .accent{color:var(--accent)}
   .sub{color:var(--muted);font-size:1.1rem;max-width:640px}
-  .lang-toggle{margin-top:20px;font-size:13px;color:var(--muted)}
-  .lang-toggle button{background:none;border:1px solid var(--border);color:var(--muted);border-radius:6px;padding:4px 10px;cursor:pointer;margin-right:6px;font-size:13px}
+  .lang-toggle{margin-top:20px;font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+  .lang-toggle button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:44px;background:none;border:1px solid var(--border);color:var(--muted);border-radius:8px;padding:0 14px;cursor:pointer;font-size:13px;font-weight:600}
+  .lang-toggle button:hover{color:var(--text);border-color:var(--muted)}
+  .lang-toggle button:focus-visible{outline:3px solid var(--text);outline-offset:2px}
   .lang-toggle button.active{color:var(--text);border-color:var(--accent)}
   section{padding:48px 0;border-bottom:1px solid var(--border)}
   h2{font-size:1.4rem;margin-bottom:24px;letter-spacing:-.01em}
@@ -31,7 +33,8 @@
   ul.skills{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
   ul.skills li{background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:13px;color:var(--text)}
   .contact{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap}
-  .contact a{color:var(--accent);text-decoration:none;font-size:14px}
+  .contact a{display:inline-flex;align-items:center;min-height:44px;padding:0 2px;color:var(--accent);text-decoration:none;font-size:14px}
+  .contact a:focus-visible{outline:3px solid var(--text);outline-offset:2px;border-radius:4px}
   .contact a:hover{text-decoration:underline}
   .cta-row{margin-top:24px}
   .btn-primary{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:8px;background:var(--accent);color:#0d1117;font-size:15px;font-weight:650;text-decoration:none;transition:filter .15s ease}
@@ -51,8 +54,8 @@
       <a class="btn-primary" href="mailto:hola@juanjosegongi.dev"><span class="i18n-en">Email me</span><span class="i18n-es hidden">Escríbeme</span></a>
     </div>
     <div class="lang-toggle">
-      <button id="ln-en" class="active" onclick="setLang('en')">EN</button>
-      <button id="ln-es" onclick="setLang('es')">ES</button>
+      <button type="button" id="ln-en" class="active" aria-pressed="true" aria-label="English" onclick="setLang('en')">EN</button>
+      <button type="button" id="ln-es" aria-pressed="false" aria-label="Español" onclick="setLang('es')">ES</button>
     </div>
   </div>
 </header>
@@ -135,6 +138,9 @@
     document.getElementById('page-es').classList.toggle('hidden', l!=='es');
     document.getElementById('ln-en').classList.toggle('active', l==='en');
     document.getElementById('ln-es').classList.toggle('active', l==='es');
+    document.getElementById('ln-en').setAttribute('aria-pressed', l==='en');
+    document.getElementById('ln-es').setAttribute('aria-pressed', l==='es');
+    document.documentElement.lang = l;
     document.querySelectorAll('.i18n-en').forEach(function(el){el.classList.toggle('hidden', l!=='en')});
     document.querySelectorAll('.i18n-es').forEach(function(el){el.classList.toggle('hidden', l!=='es')});
   }
