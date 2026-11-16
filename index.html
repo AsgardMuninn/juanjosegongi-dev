@@ -33,6 +33,10 @@
   .contact{margin-top:16px;display:flex;gap:16px;flex-wrap:wrap}
   .contact a{color:var(--accent);text-decoration:none;font-size:14px}
   .contact a:hover{text-decoration:underline}
+  .cta-row{margin-top:24px}
+  .btn-primary{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:8px;background:var(--accent);color:#0d1117;font-size:15px;font-weight:650;text-decoration:none;transition:filter .15s ease}
+  .btn-primary:hover{filter:brightness(1.1)}
+  .btn-primary:focus-visible{outline:3px solid var(--text);outline-offset:3px}
   footer{padding:32px 0;color:var(--muted);font-size:13px;text-align:center}
   .hidden{display:none}
 </style>
@@ -43,6 +47,9 @@
     <span class="badge">Available for consulting &amp; contract work</span>
     <h1>Juan José <span class="accent">González</span></h1>
     <p class="sub">Senior software engineer building reliable cloud systems, LLM-powered products, and developer tooling. Based in Manizales, Colombia — working worldwide.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="mailto:hola@juanjosegongi.dev"><span class="i18n-en">Email me</span><span class="i18n-es hidden">Escríbeme</span></a>
+    </div>
     <div class="lang-toggle">
       <button id="ln-en" class="active" onclick="setLang('en')">EN</button>
       <button id="ln-es" onclick="setLang('es')">ES</button>
@@ -128,6 +135,8 @@
     document.getElementById('page-es').classList.toggle('hidden', l!=='es');
     document.getElementById('ln-en').classList.toggle('active', l==='en');
     document.getElementById('ln-es').classList.toggle('active', l==='es');
+    document.querySelectorAll('.i18n-en').forEach(function(el){el.classList.toggle('hidden', l!=='en')});
+    document.querySelectorAll('.i18n-es').forEach(function(el){el.classList.toggle('hidden', l!=='es')});
   }
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
